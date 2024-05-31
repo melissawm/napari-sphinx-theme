@@ -16,6 +16,7 @@ html {
     --pst-color-headerlink: var(--napari-dark-gray);
     --pst-color-headerlink-hover: var(--napari-deep-blue);
     --pst-color-surface: var(--napari-gray) !important;
+    --pst-color-on-surface: #222832 !important;
 }
 
 html[data-theme="light"] {
@@ -1131,3 +1132,12 @@ div.admonition.note>.admonition-title::after {
     padding: 12px;
 }
 
+/***************************
+ Sphinx Design tabs
+***************************/
+
+/* Explicitly set colors to avois issues with unset dark theme */
+.bd-content .sd-tab-set>label {
+    background-color: var(--pst-color-surface) !important;
+    color: var(--pst-color-on-surface) !important;
+}
